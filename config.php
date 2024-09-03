@@ -1,11 +1,11 @@
 <?php
-$host = 'localhost'; // Docker MySQL container name
+$host = '8f685917b397'; // MySQL container ID or name
 $dbname = 'user_management'; // Database name
 $username = 'root'; // MySQL username
 $password = 'Root@9929'; // MySQL password
 
 try {
-    $dsn = "mysql:host=$host;charset=utf8mb4";
+    $dsn = "mysql:host=$host;port=3306;charset=utf8mb4";
     $pdo = new PDO($dsn, $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
