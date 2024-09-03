@@ -1,21 +1,18 @@
 <?php
-$dsn = 'mysql:host=ek804wooowgooskcc4co48w8;port=3306;dbname=default';
-$user = 'mysql'; // Replace with your MySQL username
-$pass = 'VNdUeqqAr4uMobgO2V0YXuTDNTfDONfJkFQjnNBKBLAtbCjR01GmE1ZcInNmJhkO'; // Replace with your MySQL password
-$charset = 'utf8mb4';
-
-$options = [
-    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
-    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-    PDO::ATTR_EMULATE_PREPARES   => false,
-];
+$host = 'dev-mysql'; // MySQL container name or alias
+$dbname = 'default'; // Database name
+$username = 'root'; // MySQL username
+$password = 'pass123'; // MySQL password
 
 try {
-    $pdo = new PDO($dsn, $user, $pass, $options);
-    echo "Connection successful!";
-} catch (\PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
+    $dsn = "mysql:host=$host;dbname=$dbname;charset=utf8mb4";
+    $pdo = new PDO($dsn, $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    echo 'Connection failed: ' . $e->getMessage();
 }
+?>
+
 
 
 
