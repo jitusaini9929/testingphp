@@ -1,12 +1,10 @@
 <?php
 // config.php
-$host = 'localhost';
-$db   = 'user_management';
-$user = 'root';  // Your MySQL username
-$pass = 'Jitu@9929';      // Your MySQL password
+$dsn = 'mysql:host=ek804wooowgooskcc4co48w8;port=3306;dbname=default';
+$user = 'mysql';
+$pass = 'VNdUeqqAr4uMobgO2V0YXuTDNTfDONfJkFQjnNBKBLAtbCjR01GmE1ZcInNmJhkO';
 $charset = 'utf8mb4';
 
-$dsn = "mysql:host=$host;charset=$charset";
 $options = [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
@@ -15,11 +13,11 @@ $options = [
 
 try {
     $pdo = new PDO($dsn, $user, $pass, $options);
-    createDatabaseAndTable($pdo, $db);
-    $pdo->exec("USE $db");
+    echo "Connection successful!";
 } catch (\PDOException $e) {
-    throw new \PDOException($e->getMessage(), (int)$e->getCode());
+    echo "Connection failed: " . $e->getMessage();
 }
+
 
 // Function to create the database and table if they do not exist
 function createDatabaseAndTable($pdo, $dbName) {
