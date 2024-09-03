@@ -3,7 +3,7 @@
 $host = 'localhost';
 $db   = 'user_management';
 $user = 'root';  // Your MySQL username
-$pass = '';      // Your MySQL password
+$pass = 'Jitu@9929';      // Your MySQL password
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;charset=$charset";
