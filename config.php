@@ -1,8 +1,8 @@
 <?php
-$host = 'dev-mysql'; // Docker MySQL container name
-$dbname = 'default'; // Database name
+$host = 'localhost'; // Docker MySQL container name
+$dbname = 'user_management'; // Database name
 $username = 'root'; // MySQL username
-$password = 'pass123'; // MySQL password
+$password = 'Jitu@9929'; // MySQL password
 
 try {
     $dsn = "mysql:host=$host;charset=utf8mb4";
