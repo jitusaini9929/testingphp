@@ -1,8 +1,7 @@
 <?php
-// config.php
 $dsn = 'mysql:host=ek804wooowgooskcc4co48w8;port=3306;dbname=default';
-$user = 'mysql';
-$pass = 'VNdUeqqAr4uMobgO2V0YXuTDNTfDONfJkFQjnNBKBLAtbCjR01GmE1ZcInNmJhkO';
+$user = 'mysql'; // Replace with your MySQL username
+$pass = 'VNdUeqqAr4uMobgO2V0YXuTDNTfDONfJkFQjnNBKBLAtbCjR01GmE1ZcInNmJhkO'; // Replace with your MySQL password
 $charset = 'utf8mb4';
 
 $options = [
@@ -17,6 +16,7 @@ try {
 } catch (\PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
 }
+
 
 
 // Function to create the database and table if they do not exist
